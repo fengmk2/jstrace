@@ -16,7 +16,8 @@
     "actorify": "~0.1.0",
     "backo": "~1.0.1",
     "escape-regexp": "0.0.1",
-    "batch": "~0.5.0"
+    "batch": "~0.5.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "bars": "git://github.com/jstrace/bars",
@@ -31,5 +32,10 @@
   "main": "lib/provider",
   "bin": {
     "jstrace": "bin/jstrace"
-  }
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
